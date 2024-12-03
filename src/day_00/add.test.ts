@@ -1,13 +1,16 @@
-import { add } from './add';
+import { describe, expect, it } from "@jest/globals";
+import { add } from "./add";
 
-describe('testing add file', () => {
-  test('empty string should result in zero', () => {
-    expect(add('')).toBe(0);
+describe("testing add file", () => {
+  it("empty string should result in zero", () => {
+    expect(add("")).toBe(0);
   });
-  test('"1,2,3" should result in 6 ', () => {
-    expect(add('1,2,3')).toBe(6);
+
+  it('"1,2,3" should result in 6', () => {
+    expect(add("1,2,3")).toBe(6);
   });
-  test('negative number should throw error', () => {
-    expect(() => add('1,-2,3')).toThrowErrorMatchingSnapshot();
+
+  it("negative number should throw error", () => {
+    expect(() => add("1,-2,3")).toThrowErrorMatchingSnapshot();
   });
 });
