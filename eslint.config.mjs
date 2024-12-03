@@ -22,6 +22,14 @@ export default tseslint.config(
     },
   },
   {
+    "rules": {
+      "jest/prefer-expect-assertions": [
+        "warn",
+        { "onlyFunctionsWithAsyncKeyword": true }
+      ]
+    }
+  },
+  {
     ignores: ['*.config.*',],
   },
 
