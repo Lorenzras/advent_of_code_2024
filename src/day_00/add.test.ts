@@ -1,4 +1,4 @@
-import { add } from '.';
+import { add } from './add';
 
 describe('testing add file', () => {
   test('empty string should result in zero', () => {
