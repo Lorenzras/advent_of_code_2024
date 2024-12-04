@@ -12,4 +12,10 @@ describe("day 1 part 2", () => {
 
     expect(f(input)).toBe(31);
   });
+
+  it("should return correct answer for the official input data", () => {
+    const input = fs.readFileSync(path.join(__dirname, "input.txt"), "utf-8");
+
+    expect(f(input)).toMatchSnapshot();
+  });
 });
