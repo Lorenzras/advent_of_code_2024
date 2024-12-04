@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing add file should return correct answer for the official input data 1`] = `1722302`;
