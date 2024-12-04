@@ -1,5 +1,5 @@
 import { describe, expect, it } from "@jest/globals";
-import f from "./index";
+import f from "./solution";
 
 describe("testing add file", () => {
   it("should return 11 according to sample in the problem", () => {
