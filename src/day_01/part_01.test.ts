@@ -3,8 +3,8 @@ import fs from "fs";
 import path from "path";
 import f from "./part_01";
 
-describe("testing add file", () => {
-  it("should return 11 according to sample in the problem", () => {
+describe("day 1 part 1", () => {
+  it("should return 11 according to the sample in the problem", () => {
     const input = fs.readFileSync(
       path.join(__dirname, "input_sample.txt"),
       "utf-8",
