@@ -4,9 +4,13 @@ This is my attempt to solve the [Advent of Code 2024](https://adventofcode.com/2
 
 Solutions are based on what I came up with when riding the train to work, so they might not be the most optimal solutions.
 
+I add non-relevant comments along side the code to help me remember what I was thinking at the time.
+
+In other words, this is not a tutorial, but a diary. XD
+
 ## Environment
 
-- nodes v22.11.0
+I did this in nodejs v22.11.0 but should work with older versions.
 
 ## Setup
 
