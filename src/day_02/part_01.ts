@@ -14,19 +14,22 @@ const isOneDirection = (n: number[]): boolean => {
   return increasing || decreasing;
 };
 
-const isSafe = (n: number[]): boolean => {
+const isInRange = (n: number[], minDistance = 1, maxDistance = 3): boolean => {
   for (let i = 0; i < n.length - 1; i++) {
     const curNum = n[i];
     const nextNum = n[i + 1];
     const distance = Math.abs(curNum - nextNum);
 
-    if (distance < 1 || distance > 3) {
+    if (distance < minDistance || distance > maxDistance) {
       return false;
     }
   }
 
   return true;
 };
+
+export const isSafe = (n: number[]): boolean =>
+  isOneDirection(n) && isInRange(n);
 
 export default function (input: string): number {
   const rows = input.split("\n");
@@ -35,7 +38,7 @@ export default function (input: string): number {
   for (const row of rows) {
     const numbers = row.split(/\s+/).map((x) => Number(x.trim()));
 
-    if (isOneDirection(numbers) && isSafe(numbers)) {
+    if (isSafe(numbers)) {
       safe += 1;
     }
   }
