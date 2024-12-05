@@ -39,7 +39,7 @@ export default function (input: string): number {
     const numbers = row.split(/\s+/).map((x) => Number(x.trim()));
 
     if (isSafe(numbers)) {
-      safe += 1;
+      safe++;
     }
   }
 
